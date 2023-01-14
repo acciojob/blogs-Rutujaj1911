@@ -16,13 +16,17 @@ public class UserService {
     @Autowired
     BlogService blogService3;
 
-    public void createUser(User user){
+    public Void createUser(User user){
+        userRepository3.save(user);
+        return null;
     }
 
     public void deleteUser(int userId){
+        userRepository3.deleteById(userId);
     }
 
     public void updateUser(User user){
+
         userRepository3.save(user);
     }
 
